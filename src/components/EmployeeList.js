@@ -21,7 +21,7 @@ const EmployeeList = () => {
         fetchData();
     }, []);
     const deleteEmployee = (e, id) => {
-        e.prevantDefault();
+        e.preventDefault();
 
         EmployeeService.deleteEmployee(id).then(response => {
             if (employees) {
